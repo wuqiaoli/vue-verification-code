@@ -1,7 +1,7 @@
 <template>
   <div class="vue2-verification-code">
-    <template v-for="(i, index) in codeList">
-      <div class="input-wrap" :key="index" :style="computedStyle">
+    <template v-for="(i, index) in codeList" :key="index">
+      <div class="input-wrap" :style="computedStyle">
         <input
           :ref="'inputRef' + index"
           class="input-wrap-size"
