@@ -1,22 +1,25 @@
 <template>
   <div class="vue2-verification-code">
-    <template v-for="(i, index) in codeList" :key="index">
-      <div class="input-wrap" :style="computedStyle">
-        <input
-          :ref="'inputRef' + index"
-          class="input-wrap-size"
-          v-model="codeList[index]"
-          type="tel"
-          name="number"
-          :min="0"
-          :maxlength="1"
-          minlength="1"
-          @input="input($event, index)"
-          @keydown="handleKeyPress($event, index)"
-          autocomplete="off"
-        />
-      </div>
-    </template>
+    <div
+      class="input-wrap"
+      :style="computedStyle"
+      v-for="(i, index) in codeList"
+      :key="index"
+    >
+      <input
+        :ref="'inputRef' + index"
+        class="input-wrap-size"
+        v-model="codeList[index]"
+        type="tel"
+        name="number"
+        :min="0"
+        :maxlength="1"
+        minlength="1"
+        @input="input($event, index)"
+        @keydown="handleKeyPress($event, index)"
+        autocomplete="off"
+      />
+    </div>
   </div>
 </template>
 <script>
