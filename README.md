@@ -9,7 +9,7 @@
 ## 安装依赖(Install)
 
 ```
-npm install  vue2-verification-code
+npm install vue2-verification-code
 ```
 
 ## 全局引入(Global Import)
@@ -19,7 +19,8 @@ npm install  vue2-verification-code
 ></verification-code>
 
 //main.js
-import verificationCode from "vue2-verification-code"";
+import verificationCode from "vue2-verification-code";
+import "vue2-verification-code/dist/vue2-verification-code.css";
 Vue.component("verificationCode", verificationCode);
 ```
 
@@ -30,6 +31,8 @@ Vue.component("verificationCode", verificationCode);
 ></verification-code>
 
 import verificationCode from "vue2-verification-code"";
+import "vue2-verification-code/dist/vue2-verification-code.css";
+
 export default{
   components:{
     verificationCode
