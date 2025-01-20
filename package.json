@@ -1,10 +1,16 @@
 {
-  "name": "vue2-code-components",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue2-verification-code",
+  "version": "1.0.0",
+  "description": "A Simple verification code component based on vue2",
+  "author": "wuqiaoli <1552044904wql@gmail.com>",
+  "main": "dist/vue2-verification-code.umd.js",
+  "module": "dist/vue2-verification-code.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue2-verification-code src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -21,6 +27,12 @@
     "eslint-plugin-vue": "^8.0.3",
     "vue-template-compiler": "^2.6.14"
   },
+  "keywords": [
+    "vue2",
+    "vue2-verification-code",
+    "verification",
+    "verification code"
+  ],
   "eslintConfig": {
     "root": true,
     "env": {
@@ -39,5 +51,11 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "license": "MIT"
 }

@@ -1,24 +1,69 @@
 # vue2-code-components
 
-## Project setup
+## 描述(Description)
+
 ```
-npm install
+基于vue2的6位数验证码组件
 ```
 
-### Compiles and hot-reloads for development
+## 安装依赖(Install)
+
 ```
-npm run serve
+npm install  vue2-verification-code
 ```
 
-### Compiles and minifies for production
+## 全局引入(Global Import)
+
 ```
-npm run build
+<verification-code @input="listeVal" :size="48" color="#ff0000"
+></verification-code>
+
+//main.js
+import verificationCode from "vue2-verification-code"";
+Vue.component("verificationCode", verificationCode);
 ```
 
-### Lints and fixes files
+## 按需引入(Plugin Component)
+
 ```
-npm run lint
+<verification-code  :size="48" color="#ff0000"
+></verification-code>
+
+import verificationCode from "vue2-verification-code"";
+export default{
+  components:{
+    verificationCode
+  }
+}
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 参数(Props)
+
+```
+props: {
+  size: {
+    type: Number,
+    default: 48,
+  },
+  color: {
+    type: String,
+    default: "#009848",
+  },
+}
+```
+
+## 事件(Events)
+
+| 序号 | 事件  | 描述                  |
+| ---- | ----- | --------------------- |
+| 1    | input | 在 Input 值改变时触发 |
+
+```
+<vue-verification-code @input="listeVal"><vue-verification-code>
+
+methods: {
+  listeVal(val) {
+    console.log("listen", val);
+  }
+}
+```
