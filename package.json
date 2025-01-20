@@ -54,8 +54,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/wuqiaoli/vue-verification-code.git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/wuqiaoli/vue-verification-code/tree/main/README.md",
   "license": "MIT"
 }
